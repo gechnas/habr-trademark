@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import re
+import webbrowser
 import requests
 from bs4 import BeautifulSoup
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
@@ -49,4 +50,5 @@ class HttpHandler(BaseHTTPRequestHandler):
 if __name__ == '__main__':
     server = HTTPServer(('', PORT), HttpHandler)
     print 'Started httpserver on port %s' % PORT
+    webbrowser.open(LOCAL_BASE_URL)
     server.serve_forever()
