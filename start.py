@@ -26,7 +26,7 @@ def process_html(content):
     for link in soup.find_all('a', href=True):
         link['href'] = link['href'].replace(BASE_URL, LOCAL_BASE_URL)
 
-    return str(soup)
+    return soup.encode(formatter=None)
 
 
 class HttpHandler(BaseHTTPRequestHandler):
