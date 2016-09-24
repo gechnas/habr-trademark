@@ -9,7 +9,7 @@ PORT = 4000
 BASE_URL = 'https://habrahabr.ru'
 LOCAL_BASE_URL = 'http://localhost:%s' % PORT
 
-SEARCH_PATTERN = re.compile(r'(\W)([\w]{6})(\W)', re.UNICODE)
+SEARCH_PATTERN = re.compile(r'(^|\W)([\w]{6})($|\W)', re.UNICODE)
 REPLACE = u'\g<1>\g<2>\u2122\g<3>'
 
 
